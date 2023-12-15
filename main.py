@@ -55,5 +55,28 @@ weather_f = {day_of_week: (temp_c * 9/5) + 32 for (day_of_week, temp_c) in weath
 print(weather_f)
 
 
+# Looping Through a dictionary
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
+}
+for (key, value) in student_dict.items():
+    print(value)
+
+import pandas as pd
+
+student_data_frame = pd.DataFrame(student_dict)
+
+print(student_data_frame)
+
+# loop though a DataFrame
+for (key, value) in student_data_frame.items():
+    print(key)
+
+# loop though rows of a DataFrame
+for (index, row) in student_data_frame.iterrows():
+    print(index)
+    print(row)
+    print(row.student)
 
 
